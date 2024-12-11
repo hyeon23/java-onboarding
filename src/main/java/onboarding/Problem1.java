@@ -5,8 +5,6 @@ import java.util.List;
 
 class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
-        int answer = Integer.MAX_VALUE;
-
         int pobiMax = 0;
         int crongMax = 0;
 
@@ -21,13 +19,11 @@ class Problem1 {
 
         for(int i = 0; i < pobi.size(); ++i){
             //List 값 접근 및 수정 -> get / set
+            int pobiScore = pobi.get(i);
+            int crongScore = crong.get(i);
 
-
-            var pobiScore = pobi.get(i);
-            var crongScore = crong.get(i);
-
-            var pobiString = pobiScore.toString();
-            var crongString = crongScore.toString();
+            String pobiString = String.valueOf(pobiScore);
+            String crongString = String.valueOf(crongScore);
 
             int sum = 0;
             int mux = 1;
